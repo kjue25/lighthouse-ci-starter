@@ -8,4 +8,5 @@ before_script:
 script:
  - webpack
 after_success:
-   - firebase deploy --token $FIREBASE_TOKEN --non-interactive
+ - firebase deploy --token $FIREBASE_TOKEN --non-interactive
+ - npm run lh -- --perf=95 https://lighthouse-ci-test.firebaseapp.com/
